@@ -9,8 +9,12 @@ html
   body
     h1 Checkers
 
+
     ul
       each val in ['black', 'white', 'black', 'white','black', 'white','black', 'white']
+        li(class=val)
+    ul
+      each val in ['white', 'black', 'white','black', 'white','black', 'white', 'black']
         li(class=val)
     
     script(src='/vendor/jquery/dist/jquery.min.js')
