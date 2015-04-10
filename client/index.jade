@@ -14,15 +14,13 @@ html
     -var whiteRow = ['white', 'black', 'white','black', 'white','black', 'white', 'black']
 
     each square, index in array
-      ul(rowtype= square, row= index)
+      ul(rowtype= square, row= index, piece=0)
         each item, index in blackRow
           li(class= item, col= index)
       ul(rowtype= square, row= index + 1)
         each item, index in whiteRow
-          li(class= item, col= index)
-      //- ul
-      //-   for item in whiteRow
-      //-     li(class=item)
+          li(class= item, col= index, piece=0)
+
 
     
     script(src='/vendor/jquery/dist/jquery.min.js')
