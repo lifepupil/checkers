@@ -3,7 +3,7 @@
 $(document).ready(init);
 
 function init() {
-  $('#reset').click(reset);
+  // $('#reset').click(reset);
 
 
 }
