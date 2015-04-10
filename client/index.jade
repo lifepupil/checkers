@@ -12,15 +12,22 @@ html
     #controls
       button#reset Reset
       #chooser
-        input#p1-choose(type='color', value = '#ff3322') 
-        label P1
-        input#p2-choose(type='color', value = '#113322')
-        label P2
-        button#start Start Game!
+        table
+          tr
+            td
+              input#p1-choose(type='color', value = '#ff3322') 
+              label Player 1
+          tr
+            td
+              input#p2-choose(type='color', value = '#113322')
+              label Player 2
+          tr
+            td 
+              button#start Start Game!
       #players
         #p1.player
         #p2.player
-              
+
     -var array = [0,2,4,6]
     -var blackRow = ['black', 'white', 'black', 'white','black', 'white','black', 'white']
     -var whiteRow = ['white', 'black', 'white','black', 'white','black', 'white', 'black']
@@ -34,7 +41,7 @@ html
           li(class= item, col= index, piece=0)
 
 
-    
+
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/lodash/lodash.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
