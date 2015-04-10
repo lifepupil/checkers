@@ -8,14 +8,22 @@ html
     link(rel='shortcut icon', href='/favicon.ico')
   body
     h1 Checkers
+    
+    -var array = [0,2,4,6]
+    -var blackRow = ['black', 'white', 'black', 'white','black', 'white','black', 'white']
+    -var whiteRow = ['white', 'black', 'white','black', 'white','black', 'white', 'black']
 
+    each square, index in array
+      ul(rowtype= square, row= index)
+        each item, index in blackRow
+          li(class= item, col= index)
+      ul(rowtype= square, row= index + 1)
+        each item, index in whiteRow
+          li(class= item, col= index)
+      //- ul
+      //-   for item in whiteRow
+      //-     li(class=item)
 
-    ul
-      each val in ['black', 'white', 'black', 'white','black', 'white','black', 'white']
-        li(class=val)
-    ul
-      each val in ['white', 'black', 'white','black', 'white','black', 'white', 'black']
-        li(class=val)
     
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/lodash/lodash.min.js')
