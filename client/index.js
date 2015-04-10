@@ -11,7 +11,6 @@ function init() {
 function reset() {
   $('#chooser').show();
   $('#players').hide();
-  $('td').css('background-color', 'white');
 }
 
 function start() {
@@ -22,7 +21,11 @@ function start() {
   $('#p2').css('background-color', p2);
   $('#chooser').hide();
 
+  // randomly determines which player goes first
   var rnd = Math.floor(Math.random() *2) + 1;
   $('.player').removeClass('active');
   $('#p' + rnd).addClass('active');
+
+  // adds pieces to board at starting locations
+  
 }
