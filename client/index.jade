@@ -8,7 +8,19 @@ html
     link(rel='shortcut icon', href='/favicon.ico')
   body
     h1 Checkers
-    
+
+    #controls
+      button#reset Reset
+      #chooser
+        input#p1-choose(type='color', value = '#ff3322') 
+        label P1
+        input#p2-choose(type='color', value = '#113322')
+        label P2
+        button#start Start Game!
+      #players
+        #p1.player
+        #p2.player
+              
     -var array = [0,2,4,6]
     -var blackRow = ['black', 'white', 'black', 'white','black', 'white','black', 'white']
     -var whiteRow = ['white', 'black', 'white','black', 'white','black', 'white', 'black']
